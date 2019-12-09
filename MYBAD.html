@@ -9,13 +9,14 @@
     <style>
     
        #board {
-           //background-image: url("MABAD.png") ;
+       background-image: url("MABAD.png") ;
           position: relative;
               width: 1536px;
               height: 864px;
               
        }
     
+     }
     </style>
 </head>
 <body>
@@ -39,7 +40,8 @@
         <p> 8. The way you kill someone is by landing on the space your oppenent is on
                </p>
                <div id="board">
-                     <img src="MABAD.png" alt="Planets" usemap="#board">
+                     <img src="MABAD.png" alt="Planets" usemap="#board" >
+              
 
                      <div id="top" style="left: 265px; top: 50px; position: absolute" > 
                             <img src="bakugo.png"width="180" height="120"> </div>
@@ -63,15 +65,33 @@
                </div>
                
 
-               <map name="planetmap">
-                 <area shape="rect" coords="0,0,82,126" alt="Square" href="sun.htm">
+               <map name="#board">
+                 <area shape="rect" coords="100,120,190,30" alt="Planets" href="bakugo.png">
+                 <map name="#board">
+                     
+
+                            
+            
                </map>
                <!-- <img src = "MA BAD.png">  -->
                
                      
 
     <script>
-     
+    //<img src = "bakugo.png"width="170" height="120">
+   
+
+    //sqrSize = 30
+      //        height = 1042
+       //       width = 2048
+        //      for(let y = 0; y <= height; y +=sqrSize)
+        //      for(let x = 0; x<= width; x +=sqrSize){
+        //             c.fillrect(x,y,sqrSize, sqrSize)
+         //     }
+         //     
+         //     Element.setAttribute(name, value);
+//
+              
 
                </script>
 
