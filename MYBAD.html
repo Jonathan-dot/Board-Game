@@ -40,7 +40,7 @@
         <p> 8. The way you kill someone is by landing on the space your oppenent is on
                </p>
                <div id="board">
-                     <img src="MABAD.png" alt="Planets" usemap="#board" >
+                     <img src="MABAD.png" alt="TheBoard" usemap="#board" >
               
 
                      <div id="top" style="left: 265px; top: 50px; position: absolute" > 
@@ -66,7 +66,11 @@
                
 
                <map name="#board">
-                 <area shape="rect" coords="100,120,190,30" alt="Planets" href="bakugo.png">
+                 <area shape="rect" coords="100,120,190,30" alt="TheBoard" href="bakugo.png">
+                 <area shape="rect" coords="100,225,190,120" alt="TheBoard" href="bakugo.png">
+                 <area shape="rect" coords="100,325,190,220" alt="TheBoard" href="bakugo.png">
+                 <area shape="rect" coords="100,425,190,320" alt="TheBoard" href="bakugo.png">
+                 <area shape="rect" coords="100,525,190,420" alt="TheBoard" href="bakugo.png">
              
                      
 
@@ -75,23 +79,25 @@
                </map>
                <!-- <img src = "MA BAD.png">  -->
                
-                     
-
-    <script>
-    //<img src = "bakugo.png"width="170" height="120">
-   
-
-    //sqrSize = 30
-      //        height = 1042
-       //       width = 2048
-        //      for(let y = 0; y <= height; y +=sqrSize)
-        //      for(let x = 0; x<= width; x +=sqrSize){
-        //             c.fillrect(x,y,sqrSize, sqrSize)
-         //     }
-         //     
-         //     Element.setAttribute(name, value);
-//
+               <button onclick="rollDice()">Roll dice</button>
               
+
+               <p id="number"></p>
+               
+
+             
+    <script>
+           function rollDice(){
+                  let roll = randomNumber(10) + randomNumber(10); //roll a d10 twice and provide total
+                  document.getElementById("number").innerHTML = roll; 
+
+           }
+
+           function randomNumber(d) {
+               return Math.floor((Math.random() * d) + 1);
+}
+
+
 
                </script>
 
