@@ -7,7 +7,23 @@
     <title>Document</title>
 
     <style>
-   
+   #div1 {
+          float: right;
+          width: 350px;
+          height: 170px;
+          margin: 2px;
+          padding: 100px;
+          border: 1px solid #aaaaaa
+   }
+       #div2{
+              float: right;
+          width: 350px;
+          height: 170px;
+          margin: 10px;
+          padding: 10px;
+          border: 1px solid #aaaaaa
+       }
+
        #board {                               
        background-image: url("MABAD.png") ;
           position: relative;
@@ -15,11 +31,11 @@
               height: 864px;
               
        }
-    
+   
      
     </style>
-</head>
-<body>
+
+
     
        <!-- These are the rules to the game -->
     <h1>My Bad<h1>
@@ -67,7 +83,7 @@
 
                <map name="#board">
                      <!-- The squares to where the pawns should move -->
-                     <area shape="rect" coords="100,125,190,20" alt="TheBoard" href="">
+                     <area shape="rect" coords="100,125,190,20" alt="TheBoard" href="#bakugo">
                  <area shape="rect" coords="100,225,190,120" alt="TheBoard" href="">
                  <area shape="rect" coords="100,325,190,220" alt="TheBoard" href="#">
                  <area shape="rect" coords="100,425,190,315" alt="TheBoard" href="#">
@@ -111,16 +127,14 @@
                <!-- <img src = "MA BAD.png">  -->
                
                <button onclick="rollDice()">Roll dice</button>
-               <button onclick="movePiece()">lol</button>
+             
 
 
                <p id="number"></p>
-               
-
              
     <script>
            function rollDice(){
-                  let roll = randomNumber(10) + randomNumber(10); //roll a d10 twice and provide total
+                  let roll = randomNumber(10) + randomNumber(0); //roll a d10 twice and provide total
                   document.getElementById("number").innerHTML = roll; 
 
            }
@@ -128,20 +142,32 @@
            function randomNumber(d) {
                return Math.floor((Math.random() * d) + 1);
 }
-function movePiece() {
-                     document.getElementById("board").style.position = "relative";
-                     var p = document.createElement("IMG")
-                     p.setAttribute("src", "Bakugo.png");
-                     p.setAttribute("width", "180");
-                     p.setAttribute("height", "120");
-                     p.setAttribute("alt", "TheBoard")
-                     document.body.appendChild(p); 
-                     rollDice();
-              }
+function makeDrop(ev) {
+  ev.preventDefault();
+}
+
+function letDrag(ev) {
+  ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function dropDat(ev) {
+  ev.preventDefault();
+  var data = ev.dataTransfer.getData("text");
+  ev.target.appendChild(document.getElementById(data));
+}
+</script>
+</head>
+<body>
 
 
-               </script>
 
-            
+<div id="div1" ondrop="dropDat(event)" ondragover="makeDrop(event)">
+  <img src="bakugo.png" draggable="true" ondragstart="letDrag(event)" id="drag1" width="88" height="31">
+</div>
+
+<div id="div2" ondrop="dropDat(event)" ondragover="makeDrop(event)"></div>
+
+
+         
 </body>
 </html>
