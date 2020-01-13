@@ -7,31 +7,50 @@
     <title>Document</title>
 
     <style>
-
-#div1 {
+       #div1 {
           position: relative;
-          width: 1px;
-          height: 1px;
-          margin-bottom: 380px;
-          margin-top: 18px;
-          margin-left: 1060px;
+          width: 22px;
+          height: 12px;
+          margin-bottom: 1px;
+          margin-top: 17px;
+          margin-left: 1050px;
           margin-right: 1126px;
           padding: 30px;
           border: 1px solid  #ffffff
    }
        #div2 {
        position: relative;
-          width: 30px;
-          height: 170px;
-          margin-bottom: 111px;
-          margin-top: 18px;
-          margin-left: 101px;
+          width: 70px;
+          height: 70px;
+          margin-bottom: 121px;
+          margin-top: 75px;
+          margin-left: 95px;
           margin-right: 114px;
           padding: 14px;
-          border: 1px solid #aaaaaa
        }
 
-
+       #div3 {
+              position: relative;
+          width: 70px;
+          height: 70px;
+          margin-bottom: 121px;
+          margin-top: 75px;
+          margin-left: 95px;
+          margin-right: 114px;
+          padding: 14px;
+          border: 1px solid #ffffff
+       }
+       #div4 {
+              position: relative;
+          width: 70px;
+          height: 70px;
+          margin-bottom: 131px;
+          margin-top: 75px;
+          margin-left: 95px;
+          margin-right: 114px;
+          padding: 14px;
+          border: 1px solid #ffffff
+       }
        #board {                               
        background-image: url("MABAD.png") ;
           position: absolute;
@@ -66,9 +85,9 @@
                      <img src="MABAD.png" alt="TheBoard" usemap="#board" >
               
                      <!-- These are the board pieces pictures -->
-                     <div id="top" style="left: 265px; top: 50px; position: absolute" > 
+                     <div id="under" style="left: 265px; top: 50px; position: absolute" > 
                             <img src="bakugo.png"width="180" height="120"> </div>
-                            <div id="top" style="left: 290px; top: 40px; position: absolute" > 
+                            <div id="under" style="left: 290px; top: 40px; position: absolute" > 
                                  <img src="Endeavor.png"width="250" height="150"> </div>
                                  <div id="under" style="left: 270px; top: 95px; position: absolute" > 
                                    <img src="Todoroki.png"width="180" height="120"> </div>
@@ -90,6 +109,7 @@
 
                <map name="#board">
                      <!-- The squares to where the pawns should move -->
+                     <!-- -->
                      <area shape="rect" coords="100,125,190,20" alt="TheBoard" href="#bakugo">
                  <area shape="rect" coords="100,225,190,120" alt="TheBoard" href="">
                  <area shape="rect" coords="100,325,190,220" alt="TheBoard" href="#">
@@ -177,11 +197,13 @@ function dragHandle(ev){
 
 
 <div id="div1" ondrop="dropDat(event)" ondragover="makeDrop(event)">
-  <img src="Award_numeral_1.png" draggable="true" ondragstart="letDrag(event)" id="drag1" width="88" height="31">
+  <img src="bakugo.png" draggable="true" ondragstart="letDrag(event)" id="drag1" width="95" height="75">
 </div>
 
 <div id="div2" ondrop="dropDat(event)" ondragover="makeDrop(event)"></div>
 
+<div id="div3" ondrop="dropDat(event)" ondragover="makeDrop(event)"></div>
+<div id="div4" ondrop="dropDat(event)" ondragover="makeDrop(event)"></div>
 
          
 </body>
