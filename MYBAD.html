@@ -8,28 +8,29 @@
 
     <style>
 
-   #div1 {
-       background-image: url("") ;
+#div1 {
           position: relative;
-          width: 3px;
+          width: 1px;
           height: 1px;
-          margin-bottom: 150px;
+          margin-bottom: 380px;
           margin-top: 18px;
-          margin-left: 1010px;
-          margin-right: 116px;
-          padding: 100px;
+          margin-left: 1060px;
+          margin-right: 1126px;
+          padding: 30px;
           border: 1px solid  #ffffff
    }
        #div2 {
-          width: 350px;
+       position: relative;
+          width: 30px;
           height: 170px;
-          margin-bottom: 10111px;
+          margin-bottom: 111px;
           margin-top: 18px;
           margin-left: 101px;
-          margin-right: 111px;
-          padding: 10px;
+          margin-right: 114px;
+          padding: 14px;
           border: 1px solid #aaaaaa
        }
+
 
        #board {                               
        background-image: url("MABAD.png") ;
@@ -159,11 +160,12 @@ function letDrag(ev) {
 function dropDat(ev) {
   ev.preventDefault();
   var data = ev.dataTransfer.getData("text");
+  ev.target.appendChild(document.getElementById(data));
 }
 
 function dragHandle(ev){
        var img = new image();
-       img.src = "bakugo.png";
+       img.src = "Award_numeral_1.png";
        ev.dataTransfer.setDragImage(img, 10, 10)
 }
 
