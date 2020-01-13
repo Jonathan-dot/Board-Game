@@ -27,6 +27,7 @@
           margin-left: 95px;
           margin-right: 114px;
           padding: 14px;
+
        }
 
        #div3 {
@@ -44,12 +45,23 @@
               position: relative;
           width: 70px;
           height: 70px;
-          margin-bottom: 131px;
+          margin-bottom: 91px;
           margin-top: 75px;
           margin-left: 95px;
           margin-right: 114px;
           padding: 14px;
           border: 1px solid #ffffff
+       }
+       #div5 {
+              position: relative;
+              width: 70px;
+          height: 70px;
+          margin-bottom: 115px;
+          margin-top: 80px;
+          margin-left: 95px;
+          margin-right: 114px;
+          padding: 14px;
+          border: 1px solid #000000
        }
        #board {                               
        background-image: url("MABAD.png") ;
@@ -85,24 +97,7 @@
                      <img src="MABAD.png" alt="TheBoard" usemap="#board" >
               
                      <!-- These are the board pieces pictures -->
-                     <div id="under" style="left: 265px; top: 50px; position: absolute" > 
-                            <img src="bakugo.png"width="180" height="120"> </div>
-                            <div id="under" style="left: 290px; top: 40px; position: absolute" > 
-                                 <img src="Endeavor.png"width="250" height="150"> </div>
-                                 <div id="under" style="left: 270px; top: 95px; position: absolute" > 
-                                   <img src="Todoroki.png"width="180" height="120"> </div>
-                                   <div id="under" style="left: 320px; top: 95px; position: absolute" > 
-                                          <img src="Denki.png"width="180" height="120"> </div>
-                                          <div id="under" style="left: 1000px; top: 600px; position: absolute" > 
-                                                 <img src="DEKUUUU.png"width="180" height="120"> </div>
-                                                 <div id="under" style="left: 935px; top: 600px; position: absolute" > 
-                                                        <img src="iida.png"width="180" height="120"> </div>
-                                                        <div id="under" style="left: 935px; top: 600px; position: absolute" > 
-                                                               <img src="ALLMIGHT.png"width="250" height="150"> </div>
-                                                               <div id="under" style="left: 935px; top: 600px; position: absolute" > 
-                                                                      <img src="iida.png"width="180" height="120"> </div>
-                                                                      <div id="under" style="left: 935px; top: 625px; position: absolute" > 
-                                                                             <img src="bruh.png"width="180" height="120"> </div>
+                    
 
                </div>
                
@@ -204,7 +199,7 @@ function dragHandle(ev){
 
 <div id="div3" ondrop="dropDat(event)" ondragover="makeDrop(event)"></div>
 <div id="div4" ondrop="dropDat(event)" ondragover="makeDrop(event)"></div>
-
+<div id="div5" ondrop="dropDat(event)" ondragover="makeDrop(event)"></div>
          
 </body>
 </html>
