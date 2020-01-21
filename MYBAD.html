@@ -8,6 +8,36 @@
 
     <style>
            
+           #STARTDAT
+           {
+              position: relative;
+          width: 52px;
+          height: 32px;
+          bottom: 125px;
+          left: 280px;
+          right: 10px;
+          padding: 30px;
+          border: 1px solid  #ffffff00
+           }
+           #STARTDAT2
+           {
+              position: relative;
+          width: 10px;
+          height: 10px;
+          bottom: 145px;
+          left: 340px;
+          right: 10px;
+   }
+   #STARTDAT3
+           {
+              position: relative;
+          width: 0px;
+          height: 0px;
+          bottom: 195px;
+          left: 360px;
+          right: 10px;
+          
+   }
        #div1 {
           position: relative;
           width: 52px;
@@ -19,17 +49,7 @@
           border: 1px solid  #ffffff
    }
        
-       }
-       #div22s {
-       position: absolute;
-          width: 70px;
-          height: 70px;
-          margin: 0 100px 380px 100px;
-          padding: 11px;
-              border: 1px solid  #ffffff;
-       }
-
-       #div3 {
+           #div3 {
               position: relative;
           width: 70px;
           height: 70px;
@@ -37,6 +57,17 @@
           margin-top: 75px;
           margin-left: 95px;
           margin-right: 114px;
+          padding: 14px;
+          border: 1px solid #ffffff
+       }
+       #div3S {
+              position: relative;
+          width: 70px;
+          height: 70px;
+          bottom: 121px;
+          top: 75px;
+          left: 95px;
+          right: 114px;
           padding: 14px;
           border: 1px solid #ffffff
        }
@@ -192,16 +223,24 @@ elem.draggable({
 
 
 <div id="div1" ondrop="dropDat(event)" ondragover="makeDrop(event)">
-  <img src="bakugo.png" draggable="true" ondragstart="letDrag(event)" id="letDrag" width="95" height="75">
+  <src="" draggable="true" ondragstart="letDrag(event)" id="letDrag" width="95" height="75">
 </div>
 
-<div id="div22s" ondrop="dropDat(event)" ondragover="makeDrop(event)">
+<div id="STARTDAT" ondrop="dropDat(event)" ondragover="makeDrop(event)">
        <img src="Todoroki.png" draggable="true" ondragstart="letDrag(event)" id="letthatDrag" width="95" height="75">
      </div>
+     <div id="STARTDAT2" ondrop="dropDat(event)" ondragover="makeDrop(event)">
+       <img src="bakugo.png" draggable="true" ondragstart="letDrag(event)" id="letthatDrag2" width="95" height="75">
+     </div>
+     <div id="STARTDAT3" ondrop="dropDat(event)" ondragover="makeDrop(event)">
+       <img src="Endeavor.png" draggable="true" ondragstart="letDrag(event)" id="letthatDrag3" width="95" height="75">
+     </div>
 
+<div id="div1" ondrop="dropDat(event)" ondragover="makeDrop(event)"></div>
 <div id="div2" ondrop="dropDat(event)" ondragover="makeDrop(event)"></div>
-
+<div id="div22s" ondrop="dropDat(event)" ondragover="makeDrop(event)"></div>
 <div id="div3" ondrop="dropDat(event)" ondragover="makeDrop(event)"></div>
+<div id="div3S" ondrop="dropDat(event)" ondragover="makeDrop(event)"></div>
 <div id="div4" ondrop="dropDat(event)" ondragover="makeDrop(event)"></div>
 <div id="div5" ondrop="dropDat(event)" ondragover="makeDrop(event)"></div>
          
