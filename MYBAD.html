@@ -7,27 +7,18 @@
     <title>Document</title>
 
     <style>
+           
        #div1 {
           position: relative;
-          width: 22px;
-          height: 12px;
-          margin-bottom: 1px;
-          margin-top: 17px;
-          margin-left: 1050px;
-          margin-right: 1126px;
+          width: 52px;
+          height: 52px;
+          bottom: 65px;
+          left: 85px;
+          right: 10px;
           padding: 30px;
           border: 1px solid  #ffffff
    }
-       #div2 {
-       position: relative;
-          width: 70px;
-          height: 70px;
-          margin-bottom: 121px;
-          margin-top: 75px;
-          margin-left: 95px;
-          margin-right: 114px;
-          padding: 14px;
-
+       
        }
        #div22s {
        position: absolute;
@@ -35,7 +26,7 @@
           height: 70px;
           margin: 0 100px 380px 100px;
           padding: 11px;
-              border: 1px solid  #ff2f2f;
+              border: 1px solid  #ffffff;
        }
 
        #div3 {
@@ -186,11 +177,12 @@ function dropDat(ev) {
   ev.target.appendChild(document.getElementById(data));
 }
 
-function dragHandle(ev){
-       var img = new image();
-       img.src = "Award_numeral_1.png";
-       ev.dataTransfer.setDragImage(img, 10, 10)
-}
+elem.draggable({
+    drag: function( event, ui ) {
+        ui.position.left = 100;
+    }
+});
+
 
 
 </script>
@@ -213,5 +205,6 @@ function dragHandle(ev){
 <div id="div4" ondrop="dropDat(event)" ondragover="makeDrop(event)"></div>
 <div id="div5" ondrop="dropDat(event)" ondragover="makeDrop(event)"></div>
          
+
 </body>
 </html>
