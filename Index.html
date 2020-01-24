@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <!--When  the page is reset them the pawns will got to their assigned locations/start positions-->
+    <style>
+           #STARTDATs
+           {
+              position: relative;
+          width: 52px;
+          height: 32px;
+          bottom: 10px;
+          top: 341px;
+          left: 1080px;
+          right: 1px;
+         
+           }
+           #STARTDAT2s
+           {
+              position: relative;
+          width: 52px;
+          height: 32px;
+          bottom: 10px;
+          top: 380px;
+          left: 1090px;
+          right: 1px;
+         
+           }
+           #STARTDAT3s
+           {
+              position: relative;
+          width: 52px;
+          height: 32px;
+          bottom: 10px;
+          top: 280px;
+          left: 1130px;
+          right: 1px;
+         
+           }
+           #STARTDAT4s
+           {
+              position: relative;
+          width: 52px;
+          height: 32px;
+          bottom: 10px;
+          top: 320px;
+          left: 1130px;
+          right: 1px;
+         
+           }
+           #STARTDAT
+           {
+              position: relative;
+          width: 52px;
+          height: 32px;
+          bottom: 100px;
+          left: 310px;
+          right: 1px;
+         
+           }
+           #STARTDAT2
+           {
+              position: relative;
+          width: 10px;
+          height: 10px;
+          bottom: 130px;
+          
+          left: 355px;
+          right: 10px;
+   }
+   #STARTDAT3
+           {
+              position: relative;
+          width: 0px;
+          height: 0px;
+          bottom: 100px;
+          left: 355px;
+          right: 10px;
+          
+   }
+   #STARTDAT4
+           {
+              position: relative;
+          width: 0px;
+          height: 0px;
+          bottom: 105px;
+          left: 310px;
+          right: 10px;
+           }
+       
+           <!-- The left hand side of the board has draggable spaces for any peice -->
+}
+           #div111s {
+              position: relative;
+          width: 64px;
+          height: 60px;
+          bottom: 211px;
+          left: 95px;
+          right: 114px;
+          padding: 14px;
+          border: 5px solid #290058
+           }
+       #div2 {
+              position: relative;
+          width: 64px;
+          height: 60px;
+          bottom: 211px;
+          left: 95px;
+          right: 114px;
+          padding: 14px;
+          border: 5px solid #460096
+       }
+       #div1s {
+              position: relative;
+          width: 64px;
+          height: 70px;
+          bottom: 211px;
+          left: 95px;
+          right: 114px;
+          padding: 14px;
+          border: 5px solid #dddddd
+       }
+           #div3 {
+              position: relative;
+          width: 60px;
+          height: 60px;
+          bottom: 211px;
+          left: 95px;
+          right: 114px;
+          padding: 14px;
+          border: 5px solid #ac65fc
+       }
+       #div11s {
+              position: relative;
+          width: 64px;
+          height: 70px;
+          bottom: 211px;
+          left: 95px;
+          right: 114px;
+          padding: 14px;
+          border: 5px solid #dddddd
+       }
+       #div3S {
+              position: relative;
+          width: 60px;
+          height: 60px;
+          bottom: 211px;
+          left: 95px;
+          right: 114px;
+          padding: 14px;
+          border: 5px solid #ff0000
+       }
+       #div4 {
+              position: relative;
+          width: 60px;
+          height: 80px;
+          bottom: 211px;
+          left: 95px;
+          right: 114px;
+          padding: 14px;
+          border: 5px solid #00ff37
+       }
+       #div5 {
+              position: relative;
+              width: 55px;
+          height: 55px;
+          bottom: 211px;
+         left: 95px;
+         right: 114px;
+          padding: 14px;
+          border: 5px solid #ff0000
+       }
+       #board {                               
+       background-image: url("MABAD.png") ;
+          position: absolute;
+              width: 1536px;
+              height: 864px;
+            
+       }
+       
+    </style>
+
+
+    
+       <!-- These are the rules to the game -->
+    <h1>My Bad<h1>
+        <p> 1. To get out of start you need a 1 or a 2 ( You can use the second number to move)
+               </p>
+        <p> 2. If you get a double (same number) you can roll the dice again. You can move and then you roll again
+               </p>
+        <p> 3. If you roll 2 6’s or 2 9’s they can’t be used but you get to roll again since it’s a double
+               </p>
+        <p> 4. You can add the dice together or use 1 at a time (If not enough spaces you don’t use your moves)
+               </p>
+        <p> 5. If you get a 4 you can only move backwards (4 on the dice not added together)
+               </p>
+        <p> 6. If you get 4 kills then you get to move any pawn that’s not in start 5 spaces forward
+               </p>
+        <p> 7. If you roll a 6 and a 9 you get to kill one of the other teams pawn (Sorry card)
+               </p>
+        <p> 8. The way you kill someone is by landing on the space your oppenent is on
+               </p>
+               <div id="board">
+                     <img src="MABAD.png" alt="TheBoard" usemap="#board" >
+              
+                     <!-- These are the board pieces pictures -->
+                    
+
+               </div>
+               
+
+
+               <!-- <img src = "MA BAD.png">  -->
+       }
+               <button onclick="rollDice()">Roll dice</button>
+             
+
+
+               <p id="number"></p>
+             
+    <script>
+           function rollDice(){
+                  let roll = randomNumber(10) + randomNumber(0); //roll a d10 twice and provide total
+                  document.getElementById("number").innerHTML = roll; 
+
+           }
+
+           function randomNumber(d) {
+               return Math.floor((Math.random() * d) + 1);
+}
+
+function makeDrop(ev) {
+  ev.preventDefault();
+}
+
+function letDrag(ev) {
+  ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function dropDat(ev) {
+  ev.preventDefault();
+  var data = ev.dataTransfer.getData("text");
+  ev.target.appendChild(document.getElementById(data));
+}
+
+elem.draggable({
+    drag: function( event, ui ) {
+        ui.position.left = 100;
+    }
+});
+
+
+
+</script>
+
+</head>
+
+<body>
+
+<!--displays blue peices and able to be dragged to draggable spaces-->
+       <div id="STARTDATs" ondrop="dropDat(event)" ondragover="makeDrop(event)">
+              <img src="iida.png" draggable="true" ondragstart="letDrag(event)" id="letthatDrags" width="95" height="75">
+            </div>
+            <div id="STARTDAT2s" ondrop="dropDat(event)" ondragover="makeDrop(event)">
+              <img src="DEKUUUU.png" draggable="true" ondragstart="letDrag(event)" id="letthatDrag2s" width="95" height="75">
+            </div>
+            <div id="STARTDAT3s" ondrop="dropDat(event)" ondragover="makeDrop(event)">
+              <img src="ALLMIGHT.png" draggable="true" ondragstart="letDrag(event)" id="letthatDrag3s" width="95" height="75">
+            </div>
+            <div id="STARTDAT4s" ondrop="dropDat(event)" ondragover="makeDrop(event)">
+              <img src="Bruh.png" draggable="true" ondragstart="letDrag(event)" id="letthatDrag4s" width="95" height="75">
+            </div>
+
+</body>
+
+
+<body>
+       
+<!--displays red peices and able to be dragged to draggable spaces-->
+<div id="STARTDAT" ondrop="dropDat(event)" ondragover="makeDrop(event)">
+       <img src="Todoroki.png" draggable="true" ondragstart="letDrag(event)" id="letthatDrag" width="95" height="75">
+     </div>
+     <div id="STARTDAT2" ondrop="dropDat(event)" ondragover="makeDrop(event)">
+       <img src="bakugo.png" draggable="true" ondragstart="letDrag(event)" id="letthatDrag2" width="95" height="75">
+     </div>
+     <div id="STARTDAT3" ondrop="dropDat(event)" ondragover="makeDrop(event)">
+       <img src="Endeavor.png" draggable="true" ondragstart="letDrag(event)" id="letthatDrag3" width="95" height="75">
+     </div>
+     <div id="STARTDAT4" ondrop="dropDat(event)" ondragover="makeDrop(event)">
+       <img src="Denki.png" draggable="true" ondragstart="letDrag(event)" id="letthatDrag4" width="95" height="75">
+     </div>
+
+
+     <div id="div111s" ondrop="dropDat(event)" ondragover="makeDrop(event)"></div>
+     <div id="div11s" ondrop="dropDat(event)" ondragover="makeDrop(event)"></div>
+<div id="div1s" ondrop="dropDat(event)" ondragover="makeDrop(event)"></div>
+<div id="div2" ondrop="dropDat(event)" ondragover="makeDrop(event)"></div>
+<div id="div22s" ondrop="dropDat(event)" ondragover="makeDrop(event)"></div>
+<div id="div3" ondrop="dropDat(event)" ondragover="makeDrop(event)"></div>
+<div id="div3S" ondrop="dropDat(event)" ondragover="makeDrop(event)"></div>
+<div id="div4" ondrop="dropDat(event)" ondragover="makeDrop(event)"></div>
+<div id="div5" ondrop="dropDat(event)" ondragover="makeDrop(event)"></div>
+         
+
+</body>
+</html>
