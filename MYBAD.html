@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 
+    <!--When  the page is reset them the pawns will got to their assigned locations/start positions-->
     <style>
-           
            #STARTDATs
            {
               position: relative;
@@ -92,7 +92,8 @@
           right: 10px;
            }
        
-           
+           <!-- The left hand side of the board has draggable spaces for any peice -->
+}
            #div111s {
               position: relative;
           width: 64px;
@@ -212,52 +213,9 @@
                </div>
                
 
-               <map name="#board">
-                     <!-- The squares to where the pawns should move -->
-                     <!-- -->
-                     <area shape="rect" coords="100,125,190,20" alt="TheBoard" href="#bakugo">
-                 <area shape="rect" coords="100,225,190,120" alt="TheBoard" href="">
-                 <area shape="rect" coords="100,325,190,220" alt="TheBoard" href="#">
-                 <area shape="rect" coords="100,425,190,315" alt="TheBoard" href="#">
-                 <area shape="rect" coords="100,530,190,420" alt="TheBoard" href="#">
-                 <area shape="rect" coords="100,630,190,520" alt="TheBoard" href="#">
-                 <area shape="rect" coords="100,750,190,640" alt="TheBoard" href="#">   
-                 
-                 <area shape="rect" coords="100,830,190,740" alt="TheBoard" href="#">
-                 <area shape="rect" coords="200,830,270,740" alt="TheBoard" href="#">
-                 <area shape="rect" coords="270,830,360,740" alt="TheBoard" href="#">
-                 <area shape="rect" coords="360,830,465,740" alt="TheBoard" href="#">
-                 <area shape="rect" coords="470,830,570,740" alt="TheBoard" href="#">
-                 <area shape="rect" coords="580,830,680,740" alt="TheBoard" href="#">
-                 <area shape="rect" coords="680,830,790,740" alt="TheBoard" href="#">
-                 <area shape="rect" coords="790,830,880,740" alt="TheBoard" href="#">
-                 <area shape="rect" coords="880,830,1000,740" alt="TheBoard" href="#">
-                 <area shape="rect" coords="1000,830,1110,740" alt="TheBoard" href="#">
-                 <area shape="rect" coords="1110,830,1210,740" alt="TheBoard" href="#">
-                 <area shape="rect" coords="1220,830,1320,740" alt="TheBoard" href="#">
-              
-                 <area shape="rect" coords="1220,750,1320,640" alt="TheBoard" href="#">
-                 <area shape="rect" coords="1220,640,1320,540" alt="TheBoard" href="#">
-                 <area shape="rect" coords="1220,530,1320,430" alt="TheBoard" href="#">
-                 <area shape="rect" coords="1220,430,1320,330" alt="TheBoard" href="#">
-                 <area shape="rect" coords="1220,330,1320,220" alt="TheBoard" href="#">
-                 <area shape="rect" coords="1220,220,1320,120" alt="TheBoard" href="#">
-                 <area shape="rect" coords="1220,120,1320,30" alt="TheBoard" href="#">
-          
-                 <area shape="rect" coords="1220,120,1120,30" alt="TheBoard" href="#">
-                 <area shape="rect" coords="1120,120,1020,30" alt="TheBoard" href="#">
-                 <area shape="rect" coords="1020,120,920,30" alt="TheBoard" href="#">
-                 <area shape="rect" coords="920,120,800,30" alt="TheBoard" href="#">
-                 <area shape="rect" coords="800,120,690,30" alt="TheBoard" href="#">
-                 <area shape="rect" coords="680,120,570,30" alt="TheBoard" href="#">
-                 <area shape="rect" coords="570,120,440,30" alt="TheBoard" href="#">
-                 <area shape="rect" coords="440,120,290,30" alt="TheBoard" href="#">
-                 <area shape="rect" coords="290 ,120,190,30" alt="TheBoard" href="#">
-              </map>
-
 
                <!-- <img src = "MA BAD.png">  -->
-               
+       }
                <button onclick="rollDice()">Roll dice</button>
              
 
@@ -298,11 +256,12 @@ elem.draggable({
 
 
 </script>
+
 </head>
 
 <body>
 
-
+<!--displays blue peices and able to be dragged to draggable spaces-->
        <div id="STARTDATs" ondrop="dropDat(event)" ondragover="makeDrop(event)">
               <img src="iida.png" draggable="true" ondragstart="letDrag(event)" id="letthatDrags" width="95" height="75">
             </div>
@@ -320,7 +279,8 @@ elem.draggable({
 
 
 <body>
-
+       
+<!--displays red peices and able to be dragged to draggable spaces-->
 <div id="STARTDAT" ondrop="dropDat(event)" ondragover="makeDrop(event)">
        <img src="Todoroki.png" draggable="true" ondragstart="letDrag(event)" id="letthatDrag" width="95" height="75">
      </div>
